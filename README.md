@@ -3,7 +3,7 @@
 It's example small project to demonstrate how you can build scalable pagination using Spring framework and JPA Specification API. 
 
 
-### Prequisities
+### Prerequisites
 1. Java 17 
 2. Docker
 
