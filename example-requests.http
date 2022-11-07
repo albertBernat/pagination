@@ -1,0 +1,45 @@
+###
+POST http://localhost:8081/library/insurance/loadPage
+Content-Type: application/json
+
+{
+  "page": 0,
+  "limit": "5",
+  "filterModel": {},
+  "sortModel": []
+}
+
+###
+POST http://localhost:8081/library/insurance/loadPage
+Content-Type: application/json
+
+{
+  "page": 0,
+  "limit": "5",
+  "filterModel": {},
+  "sortModel": [{
+    "colId": "carModel",
+    "direction": "ASC"
+  }]
+}
+
+
+###
+POST http://localhost:8081/library/insurance/loadPage
+Content-Type: application/json
+
+{
+  "page": 0,
+  "limit": "5",
+  "filterModel": {
+    "ownerName": {
+      "filterType": "text",
+      "type": "contains",
+      "value": "Hans"
+    }
+  },
+  "sortModel": [{
+    "colId": "carModel",
+    "direction": "ASC"
+  }]
+}

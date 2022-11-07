@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pagination?ssl=true,sslMode=verify-full,sslfactory=org.postgresql.ssl.DefaultJavaSSLFactory
+    hikari:
+      jdbc-url: ${spring.datasource.url}
+      username: pagination
+      password: pagination
+  flyway:
+    locations: classpath:db
